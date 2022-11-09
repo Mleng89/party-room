@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # Adding below 2 to connect api folder & django rest framework
     "api.apps.ApiConfig",
     "rest_framework",
+    "frontend.apps.FrontendConfig",
 ]
 
 MIDDLEWARE = [
