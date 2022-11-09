@@ -33,3 +33,7 @@ Dependency: `@babel/plugin-proposal-class-properties`
 ```
 
 Allows for smaller files when serving to web.
+
+---
+
+**Remember to add things into `settings.py` file**
