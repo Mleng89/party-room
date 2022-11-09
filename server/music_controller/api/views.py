@@ -7,6 +7,12 @@ from .models import Room
 
 
 # API View
-class RoomView(generics.CreateAPIView):
+class RoomView(generics.ListAPIView):
+    queryset = Room.objects.all()
+    serializer_class = RoomSerializers
+
+
+# /post
+class RoomCreate(generics.CreateAPIView):
     queryset = Room.objects.all()
     serializer_class = RoomSerializers
