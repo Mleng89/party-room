@@ -1,2 +1,4 @@
-.mypy_cache
-server/party-venv
+.node
+node_modules/
+__pycache__/
+party-venv/
