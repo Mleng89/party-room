@@ -20,6 +20,19 @@ class RoomCreate(generics.CreateAPIView):
     serializer_class = RoomSerializers
 
 
+class GetRoom(APIView):
+    serializer_class = RoomSerializers
+    lookup_url_kwarg = "code"
+
+    def get(self, req, format=None):
+        code = req.GET.get(self.lookup_url_kwarg)
+        if code is not None:
+            room = Room.objects.filter(code=code)
+            if len(room) > 0:
+                data = RoomSerializers(room[0]).data
+                data["is_host"] = self.req.session.session_key == room[0].host
+
+
 class CreateRoomView(APIView):
     serializer_class = CreateRoomSerializer
 
