@@ -37,3 +37,7 @@ Allows for smaller files when serving to web.
 ---
 
 **Remember to add things into `settings.py` file**
+
+---
+
+Sessions - unique key (IP Address) will be stored in memory
