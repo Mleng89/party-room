@@ -31,7 +31,16 @@ export default function Room(props) {
 	const [isHost, setIsHost] = useState(false);
 
 	const { roomCode } = useParams();
-	console.log('the props', props);
+	getRoomDetails();
+	function getRoomDetails() {
+		fetch('/api/get-room' + '?code=' + roomCode)
+			.then((res) => res.json())
+			.then((data) => {
+				setVotesToSkip(data.votes_to_skip),
+					setGuestCanPause(data.guest_can_pause),
+					setIsHost(data.is_host);
+			});
+	}
 
 	return (
 		<div>
