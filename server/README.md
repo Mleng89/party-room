@@ -41,3 +41,14 @@ Allows for smaller files when serving to web.
 ---
 
 Sessions - unique key (IP Address) will be stored in memory
+
+---
+
+### TypeError: Cannot read properties of underfined (reading 'push') at eval
+
+This is due to class based errors. Potentially fixed if using functional components.
+Fix: Create custom hook that utilizes a wrapper & useNavigate from `react-router-dom`
+
+[docs](https://devdocs.io/react_router/start/faq#what-happened-to-withrouter-i-need-it)
+
+---
