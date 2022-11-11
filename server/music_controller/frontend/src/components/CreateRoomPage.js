@@ -11,7 +11,8 @@ import {
 	RadioGroup,
 	FormControlLabel,
 } from '@material-ui/core';
-export default class CreateRoomPage extends Component {
+import { withRouter } from './hook/withRouter';
+class CreateRoomPage extends Component {
 	defaultVotes = 2;
 	constructor(props) {
 		super(props);
@@ -38,7 +39,7 @@ export default class CreateRoomPage extends Component {
 		};
 		fetch('/api/create-room', reqOptions)
 			.then((res) => res.json())
-			.then((data) => console.log('data-->', data));
+			.then((data) => this.props.navigate('/room/' + data.code));
 	};
 
 	render() {
@@ -121,3 +122,5 @@ export default class CreateRoomPage extends Component {
 // 		</Grid>
 // 	);
 // }
+
+export default withRouter(CreateRoomPage);
