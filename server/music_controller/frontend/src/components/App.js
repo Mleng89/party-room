@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-
 import HomePage from './HomePage';
 
 // export default class App extends Component {
@@ -19,7 +18,7 @@ import HomePage from './HomePage';
 
 export default function App() {
 	return (
-		<div>
+		<div className='center'>
 			<HomePage />
 		</div>
 	);
