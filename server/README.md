@@ -51,4 +51,10 @@ Fix: Create custom hook that utilizes a wrapper & useNavigate from `react-router
 
 [docs](https://devdocs.io/react_router/start/faq#what-happened-to-withrouter-i-need-it)
 
+`window.location.href = `/room/${roomCode}`;` works,
+
+TODO:
+
+- Look into pros and cons of using window.location.href
+
 ---
